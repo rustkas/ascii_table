@@ -1,18 +1,10 @@
-{application, ascii_table,
- [{description, "ASCII-table library. A structured view of an ASCII-table as a list of tuples."},
-  {vsn, "0.1.0"},
-  {registered, []},
-  {applications,
-   [kernel,
-    stdlib
-   ]},
-  {env,[]},
-  {modules, []},
-
-  {licenses, ["Apache 2.0"]},
-  {links, [{"Github", "https://github.com/rustkas/ascii_table"}]},
-  {files, ["src",
-           "rebar.config",
-           "README.md",
-           "LICENSE"]}
- ]}.
+{application,ascii_table,
+             [{description,"ASCII-table library. A structured view of an ASCII-table as a list of tuples."},
+              {vsn,"1.1.1"},
+              {registered,[]},
+              {applications,[kernel,stdlib]},
+              {env,[]},
+              {modules,[]},
+              {licenses,["Apache 2.0"]},
+              {links,[{"Github","https://github.com/rustkas/ascii_table"}]},
+              {files,["src","rebar.config","README.md","LICENSE"]}]}.

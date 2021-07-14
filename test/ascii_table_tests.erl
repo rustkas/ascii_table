@@ -7,6 +7,23 @@
 
 -include_lib("eunit/include/eunit.hrl").
 
+print_table_test() ->
+    ASCII_Table = ascii_table:ascii_table(),
+    lists:foreach(fun(Elem) ->
+                     case Elem of
+                         {Dec, Hx, Oct, Regex, String, Description} ->
+                             {Dec, Hx, Oct, Regex, String, Description} = Elem,
+                             ?debugFmt("~p, ~p, ~p, ~p, ~p, ~p~n",
+                                       [Dec, Hx, Oct, Regex, String, Description]);
+                         {Dec, Hx, Oct, Regex, String} ->
+                             {Dec, Hx, Oct, Regex, String} = Elem,
+                             ?debugFmt("~p, ~p, ~p, ~p, ~p~n", [Dec, Hx, Oct, Regex, String]);
+                         _ ->
+                             true
+                     end
+                  end,
+                  ASCII_Table).
+
 get_table_test() ->
     ASCII_Table = ascii_table:ascii_table(),
     true = is_list(ASCII_Table).
@@ -26,9 +43,9 @@ check_regular_expressions_test() ->
     true =
         lists:all(fun(Tuple) ->
                      RegularExpression = element(4, Tuple),
-					 %?debugFmt("~p~n", [RegularExpression]),
-                     {ok, {re_pattern,_,_,_,_}} = re:compile(RegularExpression),
-					true
+                     %?debugFmt("~p~n", [RegularExpression]),
+                     {ok, {re_pattern, _, _, _, _}} = re:compile(RegularExpression),
+                     true
                   end,
                   ASCII_Table).
 
