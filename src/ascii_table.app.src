@@ -1,5 +1,5 @@
 {application, ascii_table,
- [{description, "An OTP library"},
+ [{description, "ASCII-table library. A structured view of an ASCII-table as a list of tuples."},
   {vsn, "0.1.0"},
   {registered, []},
   {applications,
