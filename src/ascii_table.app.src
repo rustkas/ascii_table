@@ -1,0 +1,18 @@
+{application, ascii_table,
+ [{description, "An OTP library"},
+  {vsn, "0.1.0"},
+  {registered, []},
+  {applications,
+   [kernel,
+    stdlib
+   ]},
+  {env,[]},
+  {modules, []},
+
+  {licenses, ["Apache 2.0"]},
+  {links, [{"Github", "https://github.com/rustkas/ascii_table"}]},
+  {files, ["src",
+           "rebar.config",
+           "README.md",
+           "LICENSE"]}
+ ]}.
