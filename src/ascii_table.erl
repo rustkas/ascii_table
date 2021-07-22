@@ -132,7 +132,7 @@
 %%	126  16#7E  8#176  ~      ~
 %%	127  16#7F  8#177  \x7F   DEL
 %%	'''
-%% ascii_table:print().
+
 -module(ascii_table).
 
 -export([ascii_table/0, print/0]).
