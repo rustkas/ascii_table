@@ -22,3 +22,7 @@ Format
 Generate documentation
 -----
 	$ rebar3 edoc
+
+Make several commands one by one
+-----	
+    $ rebar3 do hex cut -i patch, hex publish --yes, hex docs

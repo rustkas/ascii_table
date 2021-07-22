@@ -1,6 +1,6 @@
 {application,ascii_table,
              [{description,"ASCII-table library. A structured view of an ASCII-table as a list of tuples."},
-              {vsn,"1.1.1"},
+              {vsn,"1.1.2"},
               {registered,[]},
               {applications,[kernel,stdlib]},
               {env,[]},
