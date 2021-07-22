@@ -1,11 +1,15 @@
 -module(ascii_table_tests).
 
+%-define(RESEARCH, true).
+
 %%
 %% Tests
 %%
 -ifdef(TEST).
 
 -include_lib("eunit/include/eunit.hrl").
+
+-ifdef(RESEARCH).
 
 print_table_test() ->
     ASCII_Table = ascii_table:ascii_table(),
@@ -23,6 +27,8 @@ print_table_test() ->
                      end
                   end,
                   ASCII_Table).
+
+-else.
 
 get_table_test() ->
     ASCII_Table = ascii_table:ascii_table(),
@@ -49,4 +55,9 @@ check_regular_expressions_test() ->
                   end,
                   ASCII_Table).
 
+check_hex_test() ->
+    String = ascii_table:hex(31),
+    ?assertEqual("16#1F", String).
+
+-endif.
 -endif.
